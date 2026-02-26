@@ -58,6 +58,12 @@ jobs:
       - name: Generate dist
         run: npm run build
 
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
       - name: Setup Firebase CLI
         run: npm install -g firebase-tools
 
